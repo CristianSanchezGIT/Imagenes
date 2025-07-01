@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
     <title>Invitación</title>
     <style>
         body {
@@ -25,12 +24,30 @@
             color: #444;
         }
 
-        .envelope {
+        .envelope-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 400px;
+            width: 300px;
+        }
+
+        .envelope-container {
             position: relative;
             width: 300px;
             height: 400px;
-            cursor: pointer;
+            background-image: url('https://raw.githubusercontent.com/CristianSanchezGIT/Imagenes/refs/heads/main/carta.san.valentin-main/FondoInvitacion.jpeg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
             overflow: hidden;
+        }
+
+        .envelope {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
         }
 
         .half {
@@ -68,13 +85,16 @@
 </head>
 
 <body>
-    <h1>¡Tenenos una invitación para ti! 👰🤵</h1>
-    <p
-        style="margin: 0px; background-color: #f2f2f2; color: #555; padding: 10px 15px; border-left: 4px solid #ccc; font-style: italic; font-size: 14px; border-radius: 4px; max-width: 400px;">
+    <h1>¡Tenemos una invitación para ti! 👰🤵</h1>
+    <p style="margin: 0px; background-color: #f2f2f2; color: #555; padding: 10px 15px; border-left: 4px solid #ccc; font-style: italic; font-size: 14px; border-radius: 4px; max-width: 400px;">
           Abre la imagen</p>
-    <div class="envelope" onclick="abrirSobre()">
-        <div class="half left" id="left"></div>
-        <div class="half right" id="right"></div>
+    <div class="envelope-wrapper">
+        <div class="envelope-container">
+            <div class="envelope" onclick="abrirSobre()">
+                <div class="half left" id="left"></div>
+                <div class="half right" id="right"></div>
+            </div>
+        </div>
     </div>
 
     <script>
