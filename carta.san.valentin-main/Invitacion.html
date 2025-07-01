@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Invitación</title>
+    <style>
+        body {
+            background-color: #fce4ec;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            font-family: "Marck Script", serif;
+            text-align: center;
+            font-size: 45px;
+            color: #444;
+        }
+
+        .envelope {
+            position: relative;
+            width: 300px;
+            height: 400px;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .half {
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            background-image: url('https://raw.githubusercontent.com/CristianSanchezGIT/Imagenes/refs/heads/main/carta.san.valentin-main/invita.jpeg');
+            background-size: 300px 400px;
+            background-repeat: no-repeat;
+            transition: transform 1s ease-in-out;
+        }
+
+        .left {
+            left: 0;
+            background-position: left;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+
+        .right {
+            right: 0;
+            background-position: right;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .open-left {
+            transform: translateX(-160%);
+        }
+
+        .open-right {
+            transform: translateX(160%);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>¡Tenenos una invitación para ti! 👰🤵</h1>
+    <p
+        style="margin: 0px; background-color: #f2f2f2; color: #555; padding: 10px 15px; border-left: 4px solid #ccc; font-style: italic; font-size: 14px; border-radius: 4px; max-width: 400px;">
+          Abre la imagen</p>
+    <div class="envelope" onclick="abrirSobre()">
+        <div class="half left" id="left"></div>
+        <div class="half right" id="right"></div>
+    </div>
+
+    <script>
+        function abrirSobre() {
+            document.getElementById('left').classList.add('open-left');
+            document.getElementById('right').classList.add('open-right');
+            setTimeout(() => {
+                window.location.href = 'https://juliethespitia17.my.canva.site/';
+            }, 900);
+        }
+    </script>
+</body>
+
+</html>
